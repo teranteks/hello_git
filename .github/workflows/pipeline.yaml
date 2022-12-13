@@ -29,7 +29,7 @@ jobs:
               SSH_USER: ${{ secrets.SSH_USER }}
               SSH_KEY: ${{ secrets.SSH_KEY }}
 
-      - run: ssh ${{ steps.ssh.outputs.SERVER }}  "cd /home; ls -altr; reboot now;"
+      - run: ssh ${{ steps.ssh.outputs.SERVER }}  "cd /home; ls -altr; sudo reboot now;"
 
 
           
