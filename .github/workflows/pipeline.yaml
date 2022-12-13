@@ -32,6 +32,7 @@ jobs:
       - run: ssh ${{ steps.ssh.outputs.SERVER }}  "cd /home; ls -altr; sudo reboot now;"
 
 
+
           
 
 
