@@ -1,6 +1,8 @@
 name: Instance Rebooting
 
 on:
+  branch_protection_rule:
+    types: [created, edited]
   push:
     branches: [ main ]
   pull_request:
@@ -17,12 +19,7 @@ jobs:
 
     steps:
 
-      - name: Install Dep
-        run: |
-          apt-get update && upgrade
-          apt-get install zip
-          apt-get install tar
-          
+      - run: apt install -y zip
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
