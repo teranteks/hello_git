@@ -17,7 +17,9 @@ jobs:
 
     steps:
 
-
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
     
       - id: ssh
         uses: invi5H/ssh-action@v1
